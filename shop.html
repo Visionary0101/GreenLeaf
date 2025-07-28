@@ -1,0 +1,53 @@
+<!-- shop.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GreenLeaf | Shop</title>
+  <link rel="stylesheet" href="CSS/Style.css" />
+</head>
+<body>
+  <header>
+    <h1>GreenLeaf 🌿</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="shop.html" class="active">Shop</a>
+      <a href="cart.html">Cart</a>
+      <a href="about.html">About</a>
+    </nav>
+  </header>
+
+  <main class="shop-container">
+    <h2>Our Plants</h2>
+    <div class="product-grid">
+      <div class="product-card">
+        <img src="Images/plant1.jpg" alt="Aloe Vera">
+        <h3>Aloe Vera</h3>
+        <p>₹199</p>
+        <button onclick="addToCart('Aloe Vera', 199)">Add to Cart</button>
+      </div>
+
+      <div class="product-card">
+        <img src="Images/plant2.jpg" alt="Snake Plant">
+        <h3>Snake Plant</h3>
+        <p>₹249</p>
+        <button onclick="addToCart('Snake Plant', 249)">Add to Cart</button>
+      </div>
+
+      <div class="product-card">
+        <img src="Images/plant3.jpg" alt="Money Plant">
+        <h3>Money Plant</h3>
+        <p>₹179</p>
+        <button onclick="addToCart('Money Plant', 179)">Add to Cart</button>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 GreenLeaf. All rights reserved.</p>
+  </footer>
+
+  <script src="JavaScript/shop.js"></script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!-- cart.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GreenLeaf | Cart</title>
+  <link rel="stylesheet" href="CSS/Style.css">
+</head>
+<body>
+  <header>
+    <h1>GreenLeaf 🌿</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="shop.html">Shop</a>
+      <a href="cart.html" class="active">Cart</a>
+      <a href="about.html">About</a>
+    </nav>
+  </header>
+
+  <main class="cart-container">
+    <h2>Your Cart</h2>
+    <div id="cart-items"></div>
+    <h3 id="total-price">Total: ₹0</h3>
+    <button onclick="checkout()" class="btn">Checkout</button>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 GreenLeaf. All rights reserved.</p>
+  </footer>
+
+  <script src="JavaScript/cart.js"></script>
+</body>
+</html>
