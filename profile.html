@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GreenLeaf | Profile</title>
+  <link rel="stylesheet" href="CSS/Style.css" />
+</head>
+<body>
+  <header>
+    <h1>GreenLeaf 🌿</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="shop.html">Shop</a>
+      <a href="cart.html">Cart</a>
+      <a href="about.html">About</a>
+      <a href="#" onclick="logout()">Logout</a>
+    </nav>
+  </header>
+
+  <main class="form-container">
+    <h2>Your Profile</h2>
+    <div class="profile-box">
+      <p><strong>Name:</strong> <span id="profile-name">Loading...</span></p>
+      <p><strong>Email:</strong> <span id="profile-email">Loading...</span></p>
+
+      <h3>Edit Info</h3>
+      <form id="edit-form">
+        <input type="text" placeholder="New Name" id="edit-name" required />
+        <input type="email" placeholder="New Email" id="edit-email" required />
+        <button type="submit" class="btn">Update Profile</button>
+      </form>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 GreenLeaf. All rights reserved.</p>
+  </footer>
+
+  <script src="JavaScript/profile.js"></script>
+</body>
+</html>
