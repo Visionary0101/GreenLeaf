@@ -1,0 +1,41 @@
+<!-- animation.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GreenLeaf | Watering Animation</title>
+  <link rel="stylesheet" href="CSS/animation.css">
+</head>
+<body>
+  <div class="animation-container">
+    <!-- Plant -->
+    <div class="plant">
+      <div class="pot"></div>
+      <div class="stem"></div>
+      <div class="leaf leaf1"></div>
+      <div class="leaf leaf2"></div>
+    </div>
+
+    <!-- Watering can -->
+    <div class="watering-can">
+      <div class="handle"></div>
+      <div class="spout"></div>
+    </div>
+
+    <!-- Water drops -->
+    <div class="water-drop drop1"></div>
+    <div class="water-drop drop2"></div>
+    <div class="water-drop drop3"></div>
+
+    <p class="message">Watering your plant... 🌱</p>
+  </div>
+
+  <script>
+    // Redirect to dashboard after animation
+    setTimeout(() => {
+      window.location.href = "dashboard.html";
+    }, 4500); // 4.5 seconds
+  </script>
+</body>
+</html>
