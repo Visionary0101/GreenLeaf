@@ -1,43 +1,52 @@
-// JavaScript/profile.js
-
-const user = JSON.parse(localStorage.getItem("greenleaf_user"));
-const nameSpan = document.getElementById("profile-name");
-const emailSpan = document.getElementById("profile-email");
-const editForm = document.getElementById("edit-form");
+// Existing code...
+const user = JSON.parse(localStorage.getItem("greenleaf_user")) || {};
 const nameInput = document.getElementById("edit-name");
 const emailInput = document.getElementById("edit-email");
+const profileImg = document.getElementById("profile-pic");
+const uploadPicInput = document.getElementById("upload-pic");
 
-if (user) {
-  nameSpan.textContent = user.name;
-  emailSpan.textContent = user.email;
+if (user.name && user.email) {
   nameInput.value = user.name;
   emailInput.value = user.email;
-} else {
-  alert("You're not logged in. Redirecting...");
-  window.location.href = "login.html";
+}
+if (user.image) {
+  profileImg.src = user.image;
 }
 
-// Update Profile
-editForm.addEventListener("submit", function (e) {
-  e.preventDefault();
-
-  const newName = nameInput.value.trim();
-  const newEmail = emailInput.value.trim();
-
-  const updatedUser = {
-    ...user,
-    name: newName,
-    email: newEmail,
-  };
-
-  localStorage.setItem("greenleaf_user", JSON.stringify(updatedUser));
+function saveProfile() {
+  user.name = nameInput.value.trim();
+  user.email = emailInput.value.trim();
+  localStorage.setItem("greenleaf_user", JSON.stringify(user));
   alert("Profile updated successfully!");
-  location.reload(); // Refresh to update UI
+}
+
+uploadPicInput.addEventListener("change", function () {
+  const file = uploadPicInput.files[0];
+  if (!file) return;
+
+  const reader = new FileReader();
+  reader.onload = function (e) {
+    const imageUrl = e.target.result;
+    profileImg.src = imageUrl;
+    user.image = imageUrl;
+    localStorage.setItem("greenleaf_user", JSON.stringify(user));
+  };
+  reader.readAsDataURL(file);
 });
 
-// Logout
 function logout() {
   localStorage.removeItem("greenleaf_user");
   alert("Logged out!");
   window.location.href = "login.html";
+}
+
+// 🆕 Delete account
+function deleteAccount() {
+  const confirmDelete = confirm("Are you sure you want to delete your account? This action cannot be undone.");
+  if (confirmDelete) {
+    localStorage.removeItem("greenleaf_user");
+    localStorage.removeItem("cart"); // also clear cart
+    alert("Your account has been deleted.");
+    window.location.href = "signup.html";
+  }
 }
