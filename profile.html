@@ -5,6 +5,45 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>GreenLeaf | Profile</title>
   <link rel="stylesheet" href="CSS/Style.css" />
+  <style>
+    .profile-card {
+      text-align: center;
+      padding: 20px;
+      max-width: 400px;
+      margin: 30px auto;
+      background-color: #ffffff;
+      border: 1px solid #ccc;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    .profile-card img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 10px;
+    }
+    .profile-card input[type="text"],
+    .profile-card input[type="email"] {
+      width: 90%;
+      padding: 8px;
+      margin: 8px 0;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    .profile-card input[type="file"] {
+      margin-top: 10px;
+    }
+    .profile-card button {
+      padding: 10px 20px;
+      background-color: #10b981;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -20,17 +59,13 @@
 
   <main class="form-container">
     <h2>Your Profile</h2>
-    <div class="profile-box">
-      <p><strong>Name:</strong> <span id="profile-name">Loading...</span></p>
-      <p><strong>Email:</strong> <span id="profile-email">Loading...</span></p>
-
-      <h3>Edit Info</h3>
-      <form id="edit-form">
-        <input type="text" placeholder="New Name" id="edit-name" required />
-        <input type="email" placeholder="New Email" id="edit-email" required />
-        <button type="submit" class="btn">Update Profile</button>
-      </form>
-    </div>
+    <img id="profile-pic" src="https://via.placeholder.com/100" alt="Profile Picture">
+    <input type="file" id="upload-pic" accept="image/*" />
+    <input type="text" id="edit-name" placeholder="Full Name" />
+    <input type="email" id="edit-email" placeholder="Email" />
+    <button onclick="saveProfile()">Save Changes</button>
+    <button onclick="deleteAccount()" class="btn-danger">Delete Account</button>
+    
   </main>
 
   <footer>
@@ -40,3 +75,4 @@
   <script src="JavaScript/profile.js"></script>
 </body>
 </html>
+
