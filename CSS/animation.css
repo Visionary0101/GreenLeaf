@@ -1,0 +1,154 @@
+/* CSS/animation.css */
+body {
+  background-color: #f0fdf4;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.animation-container {
+  text-align: center;
+  position: relative;
+}
+
+.message {
+  font-size: 1.2rem;
+  margin-top: 20px;
+  color: #065f46;
+}
+
+/* Pot */
+.pot {
+  width: 60px;
+  height: 40px;
+  background-color: #a0522d;
+  margin: 0 auto;
+  border-radius: 0 0 10px 10px;
+}
+
+/* Stem */
+.stem {
+  width: 8px;
+  height: 0;
+  background-color: #228b22;
+  margin: 0 auto;
+  animation: growStem 2s forwards 1s;
+}
+
+/* Leaves */
+.leaf {
+  width: 30px;
+  height: 15px;
+  background-color: #2e8b57;
+  border-radius: 15px 0;
+  position: absolute;
+  opacity: 0;
+}
+
+.leaf1 {
+  top: 80px;
+  left: calc(50% - 35px);
+  transform: rotate(-30deg);
+  animation: growLeaf 1s 3s forwards;
+}
+
+.leaf2 {
+  top: 80px;
+  left: calc(50% + 5px);
+  transform: rotate(30deg);
+  animation: growLeaf 1s 3.3s forwards;
+}
+
+/* Watering can */
+.watering-can {
+  width: 50px;
+  height: 30px;
+  background-color: #1e90ff;
+  position: absolute;
+  top: -50px;
+  left: -80px;
+  border-radius: 5px;
+  animation: moveCan 1.5s forwards;
+}
+
+.handle {
+  width: 20px;
+  height: 20px;
+  border: 3px solid #1e90ff;
+  border-radius: 50%;
+  position: absolute;
+  top: -10px;
+  left: -15px;
+}
+
+.spout {
+  width: 15px;
+  height: 6px;
+  background-color: #1e90ff;
+  position: absolute;
+  right: -15px;
+  top: 10px;
+  transform: rotate(-20deg);
+}
+
+/* Water drops */
+.water-drop {
+  width: 8px;
+  height: 8px;
+  background-color: #00bfff;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+
+.drop1 {
+  animation: drop 1s infinite;
+  animation-delay: 1.8s;
+}
+
+.drop2 {
+  animation: drop 1s infinite;
+  animation-delay: 2.1s;
+}
+
+.drop3 {
+  animation: drop 1s infinite;
+  animation-delay: 2.4s;
+}
+
+/* Animations */
+@keyframes moveCan {
+  to {
+    transform: translate(120px, 60px) rotate(-30deg);
+  }
+}
+
+@keyframes growStem {
+  to {
+    height: 60px;
+  }
+}
+
+@keyframes growLeaf {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes drop {
+  0% {
+    top: 30px;
+    left: 60px;
+    opacity: 1;
+  }
+  100% {
+    top: 90px;
+    left: 65px;
+    opacity: 0;
+  }
+}
