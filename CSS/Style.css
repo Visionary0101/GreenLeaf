@@ -221,6 +221,20 @@ nav a.active {
 .auth-form button:hover {
   background-color: #059669;
 }
+.btn-danger {
+  background-color: #ef4444; /* red */
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-danger:hover {
+  background-color: #dc2626; /* darker red */
+}
 
 
 
@@ -234,3 +248,4 @@ footer {
   bottom: 0;
   width: 100%;
 }
+
