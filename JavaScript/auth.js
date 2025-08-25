@@ -36,7 +36,8 @@ if (window.location.pathname.includes("login.html")) {
 
     if (email === savedUser.email && password === savedUser.password) {
       alert(`Welcome back, ${savedUser.name}! 🌿`);
-      window.location.href = "dashboard.html";
+      // Redirect to animation page instead of dashboard
+      window.location.href = "animation.html";
     } else {
       alert("Invalid credentials. Please try again.");
     }
