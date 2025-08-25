@@ -221,6 +221,8 @@ nav a.active {
 .auth-form button:hover {
   background-color: #059669;
 }
+/* 08.08.2025 */
+/* Danger Button - Delete Account */
 .btn-danger {
   background-color: #ef4444; /* red */
   color: white;
@@ -248,4 +250,3 @@ footer {
   bottom: 0;
   width: 100%;
 }
-
