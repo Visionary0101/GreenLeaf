@@ -1,0 +1,41 @@
+<!-- contact.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GreenLeaf | Contact</title>
+  <link rel="stylesheet" href="CSS/Style.css" />
+</head>
+<body>
+  <header>
+    <h1>GreenLeaf 🌿</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="shop.html">Shop</a>
+      <a href="cart.html">Cart</a>
+      <a href="about.html">About</a>
+      <a href="contact.html" class="active">Contact</a>
+      <a href="login.html">Login</a>
+      <a href="signup.html">Sign Up</a>
+
+    </nav>
+  </header>
+
+  <main class="contact-section">
+    <h2>Contact Us</h2>
+    <p>If you have any questions or feedback, feel free to reach out!</p>
+
+    <form class="contact-form" action="https://formspree.io/f/mwkgbjvv" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit" class="btn">Send Message</button>
+    </form>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 GreenLeaf. All rights reserved.</p>
+  </footer>
+</body>
+</html>
